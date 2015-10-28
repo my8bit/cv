@@ -95,15 +95,52 @@
   }
 }
 
+.contact-info {
+  text-align: center;
+}
+
+p {
+  text-indent: 2em;
+}
+
+@media print {
+
+  .page-header .title-bar,
+  .section-header {
+      border: none;
+      padding: 0;
+  }
+
+  .icon-links,
+  .avatar,
+  .contact-info,
+  .page-footer {
+    display: none !important;
+  }
+
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .contact-info {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+}
+
+.resume-item-details a {
+    text-decoration: none;
+}
+
 .contact-button {
   @include border-radius(3px);
   background-color: #efefef;
   text-decoration: none;
   text-align: center;
-  display: block;
-  margin: 1.5rem auto;
-  width: 220px;
-  font-size: 1.375rem;
+  display: inline-block;
+  width: 280px;
+  font-size: 1.5rem;
   @include sans_light;
   color: #333;
   line-height: 55px;

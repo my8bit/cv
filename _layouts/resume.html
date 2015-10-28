@@ -11,7 +11,7 @@
 
         <!-- You can turn off the avatar in _config.yml by setting to false -->
         {% if site.resume_avatar == 'true' %}
-        <img src="images/avatar.jpg" alt="my photo" class="avatar">
+        <img src="https://dl.dropboxusercontent.com/u/40008870/IhorPavlenkoAvatar.jpg" alt="my photo" class="avatar">
         {% endif %}
 
         <!-- Your name is defined in the _config.yml file -->
@@ -27,17 +27,56 @@
         </div>
 
         <div class="executive-summary">
-          <p>This is the executive summary. You should write a few brief, concise, and meaningful sentences about yourself from a professional context, and your immediate career goals. Make the length appropriate for your needs, but K.I.S.S.</p>
+          <p>I am a passionate, self-motivated and well-organized professional JavaScript front-end developer. Have a strong knowledge in core JavaScript and understanding the MV* frameworks. I am used to writing a clean maintainable code to provide a great user experience.</p>
+          <p>Open minded and successful working in both team and self-directed work environments. Strong analytical skills and client-side expertise.</p>
         </div>
 
         {% if site.resume_looking_for_work == 'yes' %}
-        <a href="mailto:{{ site.resume_contact_email }}" class="contact-button">Contact me</a>
+        <div class="contact-info">
+          <a href="mailto:{{ site.resume_contact_email }}" class="contact-button mail">Mail me</a>
+          <a href="skype:{{ site.resume_contact_skype }}" class="contact-button skype">Skype me</a>
+        </div>
         {% elsif site.resume_looking_for_work == 'no' %}
         <a class="contact-button not-looking">I'm not looking for work right now.</a>
         {% else %}
         {% endif %}
 
       </header>
+
+      {% if site.resume_section_skills %}
+      <!-- begin Skills -->
+      <section class="content-section">
+
+        <header class="section-header">
+          <h2>Skills</h2>
+        </header>
+
+        <table style="width:100%">
+          <tr>
+            <th><h4 class="resume-item-details">Core</h4></th>
+            <th><h4 class="resume-item-details">Frameworks &amp; Libraries</h4></th>
+            <th><h4 class="resume-item-details">Tools</h4></th>
+          </tr>
+          <tr>
+            <td>JavaScript ES5</td>
+            <td>Sencha ExtJS 3/4</td> 
+            <td>git</td>
+          </tr>
+          <tr>
+            <td>HTML4/5</td>
+            <td>jQuery</td> 
+            <td>JIRA</td>
+          </tr>
+          <tr>
+            <td>CSS3/4</td>
+            <td>Knockout</td> 
+            <td>*nix</td>
+          </tr>
+        </table>
+
+      </section>
+      <!-- end Skills -->
+      {% endif %}
 
       <!-- begin Experience -->
       <section class="content-section">
@@ -48,32 +87,46 @@
 
         <!-- Duplicate these resume-item elements and edit accordingly for each job you want to add here -->
         <div class="resume-item">
-          <h3 class="resume-item-title">Springfield Nuclear Power Plant</h3>
-          <h4 class="resume-item-details">Safety Inspector &bull; Nov, 1980 &mdash; Present</h4>
-          <p class="resume-item-copy">Write about your core competencies in one or two sentences describing your position. If you held the position for a long time, it could be a longer section, including a couple bullet points:</p>
+          <h3 class="resume-item-title">GlobalLogic - <a href="http://globallogic.com">http://globallogic.com</a></h3>
+          <h4 class="resume-item-details">JavaScript developer &bull; Jan, 2013 &mdash; Present</h4>
+          <p class="resume-item-copy">Enhancing and maintaining large Rich Internet application based on ExtJS framework as a member of front-end Scrum team.</p>
+          <h4>Responsibility:</h4>
           <ul class="resume-item-list">
-            <li>Ate lots of donuts</li>
-            <li>Fell asleep rarely</li>
-            <li>Left promptly at end of day (sometimes earlier)</li>
+            <li>Implementing new and improving existing UI components</li>
+            <li>Implementing client-side API for third-party developers</li>
+            <li>Improving and maintaining legacy codebase throughout code refactoring</li>
+            <li>Implementing unit, functional tests and conducting code reviews</li>
+            <li>Documenting public API's by using JSDoc</li>
+            <li>Participating in planning and design Scrum meetings, including architectural designs and code reviews</li>
+            <li>Involving in software lifecycle activities</li>
           </ul>
-          <p class="resume-item-copy">If you're going to copy paste markup, or edit it, just be sure to keep the appropriate classnames on your new elements for styling purposes.</p>
-
+          <h4>Technologies:</h4>
+          <ul class="resume-item-list">
+            <li>Sencha ExtJS</li>
+            <li>jQuery</li>
+            <li>Knockout</li>
+            <li>JasmineJS / Mocha</li>
+            <li>groovy</li>
+          </ul>
+          
         </div><!-- end of resume-item -->
 
         <!-- another resume item -->
         <div class="resume-item">
-          <h3 class="resume-item-title">Sir Putt-A-Lot's Merrie Olde Fun Centre</h3>
-          <h4 class="resume-item-details">Windmill Crank Operator &bull; Jun, 1978 &mdash; Sept, 1979</h4>
-          <p class="resume-item-copy">If your stint was shorter, feel free to be brief and just call out the most meaningful points of your role. Be concise, and be meaninful. The person reading just needs enough to want to talk to you more about your experience.</p>
-
-        </div><!-- end of resume-item -->
-
-        <!-- by now you're getting the picture... -->
-        <div class="resume-item">
-          <h3 class="resume-item-title">Simpson Lazer Tag</h3>
-          <h4 class="resume-item-details">Front Desk Attendant &bull; Jun, 1975 &mdash; May, 1978</h4>
-          <p class="resume-item-copy">Boy, when Marge first told me she was going to the Police Academy, I thought it would be fun and exciting, you know, like the movie... Spaceballs. But instead, it's been painful and disturbing, like the movie Police Academy.</p>
-
+          
+          <h3 class="resume-item-title">Research Institute of Urban Social and Economic Development of Kyiv - <a href="http://www.ndirom.org/en/">http://www.ndirom.org/en/</a></h3>
+          <h4 class="resume-item-details">Software developer &bull; Aug, 2011 &mdash; Jan, 2013</h4>
+          <p class="resume-item-copy">Applications that process and generates complex reports.</p>
+          <h4>Responsibility:</h4>
+          <ul class="resume-item-list">
+            <li>Implementing application UI</li>
+            <li>Administrating and improving database performance</li>
+          </ul>
+          <h4>Technologies:</h4>
+          <ul class="resume-item-list">
+            <li>Borland Delphi</li>
+            <li>PL/SQL</li>
+          </ul>
         </div><!-- end of resume-item -->
 
       </section>
@@ -88,9 +141,13 @@
         </header>
 
         <div class="resume-item">
-          <h3 class="resume-item-title">Springfield College</h3>
-          <h4 class="resume-item-details">Associates Degree, Business Management &bull; 1984 &mdash; 1986</h4>
-          <p class="resume-item-copy">If you had any meaningful roles at college, feel free to write about them here.</p>
+          <h3 class="resume-item-title">National Technical University of Ukraine “Kyiv Polytechnic Institute”</h3>
+          <h4 class="resume-item-details">Bachelor degree, Computer Science &bull; 2012 &mdash; 2014</h4>
+        </div>
+
+        <div class="resume-item">
+          <h3 class="resume-item-title">National Technical University of Ukraine “Kyiv Polytechnic Institute”</h3>
+          <h4 class="resume-item-details">Specialist degree, Engineering &bull; 2004 &mdash; 2011</h4>
         </div>
 
       </section>
@@ -119,33 +176,6 @@
 
       </section>
       <!-- end Projects -->
-      {% endif %}
-
-      {% if site.resume_section_skills %}
-      <!-- begin Skills -->
-      <section class="content-section">
-
-        <header class="section-header">
-          <h2>Skills</h2>
-        </header>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Donut design</h4>
-          <p class="resume-item-copy">Sprinkle art, icing design, eclair management, taste testing, donut/coffee pairing research</p>
-        </div>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Craft beer brewing</h4>
-          <p class="resume-item-copy">Hops inspection, brew testing, distribution management, bottle label design, festival and event management</p>
-        </div>
-
-        <div class="resume-item">
-          <h4 class="resume-item-details">Family leadership</h4>
-          <p class="resume-item-copy">Bread winning, conflict resolution, couch inspection, TV longevity testing</p>
-        </div>
-
-      </section>
-      <!-- end Skills -->
       {% endif %}
 
       {% if site.resume_section_recognition %}
@@ -222,8 +252,8 @@
       {% endif %}
 
       <footer class="page-footer">
-        <p class="footer-line">Made by <a href="http://twitter.com/jglovier">@jglovier</a>. Fork me on <a href="https://github.com/jglovier/resume-template">GitHub</a>.</p>
-        <p class="footer-line">If this is your live resume, you can modify or remove this part. ;-)</p>
+        <p class="footer-line">Was nice to meet you. Thank you for your time and have a good day! :)</p>
+        <p class="footer-line">Modified from <a href="http://twitter.com/jglovier">@jglovier</a> fork.</p>
       </footer>
 
     </div>
